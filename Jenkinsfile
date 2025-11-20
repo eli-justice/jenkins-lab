@@ -20,7 +20,7 @@ pipeline {
            stage('Push Docker Image') {
                steps {
                    script {
-                       sh 'docker push docker.io/mensahelikem4485/justixapi:latest'
+                       sh 'docker push docker.io/mensahelikem44850/justixapi:latest'
                    }
                }
            }
