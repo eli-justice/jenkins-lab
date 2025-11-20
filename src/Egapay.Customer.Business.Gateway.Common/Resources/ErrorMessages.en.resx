@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="GetCountriesFailed" xml:space="preserve">
+    <value>failed to get countries.</value>
+  </data>
+
+  <data name="GetRegionsFailed" xml:space="preserve">
+    <value>failed to get regions.</value>
+  </data>
+  <data name="UnknownCountryFilter" xml:space="preserve">
+    <value>unknown country filter</value>
+  </data>
+  <data name="DefaultError" xml:space="preserve">
+    <value>failed to process request. try again later.</value>
+  </data>
+  <data name="SendOTPFailed" xml:space="preserve">
+    <value>failed to send otp. try again later.</value>
+  </data>
+  <data name="VerifyOTPFailed" xml:space="preserve">
+    <value>failed to verify otp. try again later.</value>
+  </data>
+  <data name="ExpiredOtp" xml:space="preserve">
+    <value>The OTP has expired. Please request for a new one</value>
+  </data>
+  <data name="NonOperatingCountry" xml:space="preserve">
+    <value>The selected country is invalid for this operation</value>
+  </data>
+  <data name="InvalidCredentials" xml:space="preserve">
+    <value>Login failed. The email or password you entered is incorrect. Please try again</value>
+  </data>
+  <data name="MerchantNotFound" xml:space="preserve">
+    <value>merchant does not exist</value>
+  </data>
+  <data name="RequestPasswordResetFailed" xml:space="preserve">
+    <value>failed to request password reset. try again later.</value>
+  </data>
+  <data name="AuthenticateMerchantFailed" xml:space="preserve">
+    <value>failed to authenticate merchant. try again later.</value>
+  </data>
+  <data name="ResetPasswordFailed" xml:space="preserve">
+    <value>failed to reset password. try again later.</value>
+  </data>
+  <data name="UnAuthorizedUser" xml:space="preserve">
+    <value>unauthorized user</value>
+  </data>
+  <data name="GetMerchantBusinessInfoFailed" xml:space="preserve">
+    <value>failed to retrieve merchant business information. try again later.</value>
+  </data>
+  <data name="GetMerchantBusinessContactInfoFailed" xml:space="preserve">
+    <value>failed to retrieve merchant contact information. try again later.</value>
+  </data>
+  <data name="UpdateMerchantBusinessInfoFailed" xml:space="preserve">
+    <value>failed to update merchant business information. try again later.</value>
+  </data>
+  <data name="UpdateMerchantContactInfoFailed" xml:space="preserve">
+    <value>failed to update merchant contact information. try again later.</value>
+  </data>
+  <data name="AddContactPersonFailed" xml:space="preserve">
+    <value>failed to add contact person. try again later.</value>
+  </data>
+  <data name="UpdateContactPersonFailed" xml:space="preserve">
+    <value>failed to update contact person. try again later.</value>
+  </data>
+  <data name="DeleteContactPersonFailed" xml:space="preserve">
+    <value>failed to delete contact person. try again later.</value>
+  </data>
+  <data name="GetContactPersonFailed" xml:space="preserve">
+    <value>failed to retrieve contact person(s). try again later.</value>
+  </data>
+  <data name="UploadImageFailed" xml:space="preserve">
+    <value>failed to upload image. try again later.</value>
+  </data>
+  <data name="AddBusinessDirectorOrShareholderFailed" xml:space="preserve">
+    <value>failed to add director or shareholder. try again later.</value>
+  </data>
+  <data name="UpdateBusinessDirectorOrShareholderFailed" xml:space="preserve">
+    <value>failed to update director or shareholder. try again later.</value>
+  </data>
+  <data name="DeleteBusinessDirectorOrShareholderFailed" xml:space="preserve">
+    <value>failed to delete director or shareholder. try again later.</value>
+  </data>
+  <data name="GetAllBusinessDirectorOrShareholderFailed" xml:space="preserve">
+    <value>failed to retrieve director or shareholder info. try again later.</value>
+  </data>
+  <data name="UpdateDirectorOrShareholderImageUploadFailed" xml:space="preserve">
+    <value>failed to update director or shareholder image upload. try again later.</value>
+  </data>
+  <data name="UploadDocumentFailed" xml:space="preserve">
+    <value>failed to upload document. try again later.</value>
+  </data>
+  <data name="AddBusinessDocumentFailed" xml:space="preserve">
+    <value>failed to add document. try again later.</value>
+  </data>
+  <data name="UpdateBusinessDocumentFailed" xml:space="preserve">
+    <value>failed to update document. try again later.</value>
+  </data>
+  <data name="GetAllBusinessDocumentFailed" xml:space="preserve">
+    <value>failed to get document(s). try again later.</value>
+  </data>
+  <data name="DeleteBusinessDocumentFailed" xml:space="preserve">
+    <value>failed to delete document. try again later.</value>
+  </data>
+  <data name="GetActiveRegulatorsFailed" xml:space="preserve">
+    <value>failed to get active regulators. try again later.</value>
+  </data>
+  <data name="GetActiveIndustriesFailed" xml:space="preserve">
+    <value>failed to get active industries. try again later.</value>
+  </data>
+
+  <data name="ValidationErrors" xml:space="preserve">
+    <value>validation error(s)</value>
+  </data>
+  <data name="MerchantAlreadyExists" xml:space="preserve">
+    <value>merchant already exists and onboarded</value>
+  </data>
+
+  <data name="GetTransactionsFailed" xml:space="preserve">
+    <value>failed to get transactions. try again later</value>
+    </data>
+
+</root>

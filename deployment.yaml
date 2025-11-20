@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: justixapi
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: justixapi
+  template:
+    metadata:
+      labels:
+        app: justixapi
+    spec:
+      containers:
+        - name: justixapi
+          image: mensahelikem44850/justixapi:latest
+          ports:
+            - containerPort: 80

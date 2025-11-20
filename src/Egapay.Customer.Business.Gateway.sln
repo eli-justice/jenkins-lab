@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Egapay.Customer.Business.Gateway.API", "src\Egapay.Customer.Business.Gateway.API\Egapay.Customer.Business.Gateway.API.csproj", "{815FA072-D2D2-4E9E-AC07-68D2504FE937}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Egapay.Customer.Business.Gateway.MerchantOnboarding", "src\Egapay.Customer.Business.Gateway.MerchantOnboarding\Egapay.Customer.Business.Gateway.MerchantOnboarding.csproj", "{3AC4D081-0457-4DAD-8B82-18C3C0888474}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Egapay.Customer.Business.Gateway.Common", "src\Egapay.Customer.Business.Gateway.Common\Egapay.Customer.Business.Gateway.Common.csproj", "{9CDD8786-5D21-4F96-AB9F-1E0DA2FB0579}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Egapay.Customer.Business.Gateway.MerchantTransactions", "src\Egapay.Customer.Business.Gateway.MerchantTransactions\Egapay.Customer.Business.Gateway.MerchantTransactions.csproj", "{90A330AB-E5A1-43D9-8BAE-6AA74020BF6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{815FA072-D2D2-4E9E-AC07-68D2504FE937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{815FA072-D2D2-4E9E-AC07-68D2504FE937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{815FA072-D2D2-4E9E-AC07-68D2504FE937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{815FA072-D2D2-4E9E-AC07-68D2504FE937}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AC4D081-0457-4DAD-8B82-18C3C0888474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AC4D081-0457-4DAD-8B82-18C3C0888474}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AC4D081-0457-4DAD-8B82-18C3C0888474}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AC4D081-0457-4DAD-8B82-18C3C0888474}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CDD8786-5D21-4F96-AB9F-1E0DA2FB0579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CDD8786-5D21-4F96-AB9F-1E0DA2FB0579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CDD8786-5D21-4F96-AB9F-1E0DA2FB0579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CDD8786-5D21-4F96-AB9F-1E0DA2FB0579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90A330AB-E5A1-43D9-8BAE-6AA74020BF6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A330AB-E5A1-43D9-8BAE-6AA74020BF6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A330AB-E5A1-43D9-8BAE-6AA74020BF6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A330AB-E5A1-43D9-8BAE-6AA74020BF6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

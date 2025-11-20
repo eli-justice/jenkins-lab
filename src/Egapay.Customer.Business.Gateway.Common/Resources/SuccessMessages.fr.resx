@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+
+    <data name="GetCountriesSuccess" xml:space="preserve">
+        <value>pays récupérés avec succès.</value>
+    </data>
+
+    <data name="GetRegionsSuccess" xml:space="preserve">
+        <value>régions récupérées avec succès.</value>
+    </data>
+
+    <!--Business Info-->
+    <data name="GetBusinessInfoSuccess" xml:space="preserve">
+    <value>informations commerciales récupérées avec succès</value>
+</data>
+
+    <data name="AddBusinessInfoSuccess" xml:space="preserve">
+    <value>informations commerciales ajoutées avec succès</value>
+</data>
+
+    <data name="UpdatedBusinessInfoSuccess" xml:space="preserve">
+    <value>informations commerciales mises à jour avec succès</value>
+</data>
+
+    <data name="DeleteBusinessInfoSuccess" xml:space="preserve">
+    <value>informations commerciales supprimées avec succès</value>
+</data>
+
+    <data name="GetActiveRegulatorsSuccess" xml:space="preserve">
+    <value>régulateurs actifs récupérés avec succès</value>
+</data>
+
+    <data name="GetActiveIndustriesSuccess" xml:space="preserve">
+    <value>industries actives récupérées avec succès</value>
+</data>
+
+    <!--Contact Persons-->
+    <data name="GetContactPersonsSuccess" xml:space="preserve">
+    <value>personnes de contact récupérées avec succès</value>
+</data>
+
+    <data name="AddContactPersonSuccess" xml:space="preserve">
+    <value>personne de contact ajoutée avec succès</value>
+</data>
+
+    <data name="UpdatedContactPersonSuccess" xml:space="preserve">
+    <value>personne de contact mise à jour avec succès</value>
+</data>
+
+    <data name="DeleteContactPersonSuccess" xml:space="preserve">
+    <value>personne de contact supprimée avec succès</value>
+</data>
+
+    <!--Directors-->
+    <data name="GetDirectorsSuccess" xml:space="preserve">
+    <value>directeurs récupérés avec succès</value>
+</data>
+
+    <data name="AddDirectorSuccess" xml:space="preserve">
+    <value>directeur ajouté avec succès</value>
+</data>
+
+    <data name="UpdatedDirectorSuccess" xml:space="preserve">
+    <value>directeur mis à jour avec succès</value>
+</data>
+
+    <data name="DeleteDirectorSuccess" xml:space="preserve">
+    <value>directeur supprimé avec succès</value>
+</data>
+
+    <!--Documents-->
+    <data name="GetDocumentsSuccess" xml:space="preserve">
+    <value>documents récupérés avec succès</value>
+</data>
+
+    <data name="AddDocumentSuccess" xml:space="preserve">
+    <value>documents ajoutés avec succès</value>
+</data>
+
+    <data name="UpdatedDocumentSuccess" xml:space="preserve">
+    <value>documents mis à jour avec succès</value>
+</data>
+
+    <data name="DeleteDocumentSuccess" xml:space="preserve">
+    <value>documents supprimés avec succès</value>
+</data>
+
+    <data name="GetAccountStatusSuccess" xml:space="preserve">
+    <value>statut du compte récupéré avec succès</value>
+</data>
+
+    <data name="AddMerchantSuccess" xml:space="preserve">
+    <value>commerçant créé avec succès</value>
+</data>
+
+
+    <data name="GetAccountStatusSuccess" xml:space="preserve">
+        <value>statut du compte récupéré avec succès</value>
+    </data>
+
+    <data name="AddMerchantSuccess" xml:space="preserve">
+        <value>commerçant créé avec succès</value>
+    </data>
+
+    <data name="UpdateBusinessContactSuccess" xml:space="preserve">
+        <value>contact commercial mis à jour avec succès</value>
+    </data>
+
+    <data name="GetContactInfoSuccess" xml:space="preserve">
+        <value>informations de contact récupérées avec succès</value>
+    </data>
+
+
+    <data name="PasswordResetSuccess" xml:space="preserve">
+        <value>"Mot de passe réinitialisé avec succès."</value>
+    </data>
+
+    <data name="MerchantLoginSuccess" xml:space="preserve">
+        <value>commerçant authentifié avec succès.</value>
+    </data>
+
+    <data name="RequestPasswordResetSuccess" xml:space="preserve">
+        <value>Un guide de réinitialisation de mot de passe a été envoyé à votre e-mail</value>
+    </data>
+
+    <data name="MerchantAlreadyExists" xml:space="preserve">
+        <value>le commerçant existe déjà et est intégré.</value>
+    </data>
+
+    <data name="SendOTPSuccess" xml:space="preserve">
+        <value>otp envoyé à l'e-mail du commerçant.</value>
+    </data>
+
+    <data name="VerifyOTPSuccess" xml:space="preserve">
+        <value>otp vérifié avec succès</value>
+    </data>
+
+    <data name="GetTransactionsSuccess" xml:space="preserve">
+    <value>transactions retrieved successfully</value>
+    </data>
+</root>

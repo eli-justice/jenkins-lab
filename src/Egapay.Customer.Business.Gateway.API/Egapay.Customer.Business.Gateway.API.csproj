@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Mime-Detective" Version="24.12.2" />
+        <PackageReference Include="OmniDataAccess.NoSqlDatabases" Version="1.1.0-rc.1.251006" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
+        <PackageReference Include="FluentValidation" Version="11.9.2" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.1.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="appsettings.production.json.example">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Egapay.Customer.Business.Gateway.Common\Egapay.Customer.Business.Gateway.Common.csproj" />
+      <ProjectReference Include="..\Egapay.Customer.Business.Gateway.MerchantOnboarding\Egapay.Customer.Business.Gateway.MerchantOnboarding.csproj" />
+      <ProjectReference Include="..\Egapay.Customer.Business.Gateway.MerchantTransactions\Egapay.Customer.Business.Gateway.MerchantTransactions.csproj" />
+    </ItemGroup>
+
+</Project>

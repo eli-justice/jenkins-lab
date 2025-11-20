@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="GetCountriesFailed" xml:space="preserve">
+    <value>échec de la récupération des pays.</value>
+  </data>
+  <data name="GetRegionsFailed" xml:space="preserve">
+    <value>échec de la récupération des régions.</value>
+  </data>
+  <data name="UnknownCountryFilter" xml:space="preserve">
+    <value>filtre de pays inconnu</value>
+  </data>
+  <data name="DefaultError" xml:space="preserve">
+    <value>échec du traitement de la demande. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="SendOTPFailed" xml:space="preserve">
+    <value>échec de l'envoi de l'OTP. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="VerifyOTPFailed" xml:space="preserve">
+    <value>échec de la vérification de l'OTP. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="ExpiredOtp" xml:space="preserve">
+    <value>L'OTP a expiré. Veuillez en demander un nouveau</value>
+  </data>
+  <data name="NonOperatingCountry" xml:space="preserve">
+    <value>Le pays sélectionné n'est pas valide pour cette opération</value>
+  </data>
+  <data name="InvalidCredentials" xml:space="preserve">
+    <value>Échec de la connexion. L'email ou le mot de passe que vous avez saisi est incorrect. Veuillez réessayer</value>
+  </data>
+  <data name="MerchantNotFound" xml:space="preserve">
+    <value>le commerçant n'existe pas</value>
+  </data>
+  <data name="RequestPasswordResetFailed" xml:space="preserve">
+    <value>échec de la demande de réinitialisation du mot de passe. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="AuthenticateMerchantFailed" xml:space="preserve">
+    <value>échec de l'authentification du commerçant. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="ResetPasswordFailed" xml:space="preserve">
+    <value>échec de la réinitialisation du mot de passe. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="UnAuthorizedUser" xml:space="preserve">
+    <value>utilisateur non autorisé</value>
+  </data>
+  <data name="GetMerchantBusinessInfoFailed" xml:space="preserve">
+    <value>échec de la récupération des informations commerciales du commerçant. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="GetMerchantBusinessContactInfoFailed" xml:space="preserve">
+    <value>échec de la récupération des informations de contact du commerçant. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="UpdateMerchantBusinessInfoFailed" xml:space="preserve">
+    <value>échec de la mise à jour des informations commerciales du commerçant. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="UpdateMerchantContactInfoFailed" xml:space="preserve">
+    <value>échec de la mise à jour des informations de contact du commerçant. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="AddContactPersonFailed" xml:space="preserve">
+    <value>échec de l'ajout d'une personne de contact. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="UpdateContactPersonFailed" xml:space="preserve">
+    <value>échec de la mise à jour de la personne de contact. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="DeleteContactPersonFailed" xml:space="preserve">
+    <value>échec de la suppression de la personne de contact. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="GetContactPersonFailed" xml:space="preserve">
+    <value>échec de la récupération des personnes de contact. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="UploadImageFailed" xml:space="preserve">
+    <value>échec du téléchargement de l'image. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="AddBusinessDirectorOrShareholderFailed" xml:space="preserve">
+    <value>échec de l'ajout d'un directeur ou d'un actionnaire. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="UpdateBusinessDirectorOrShareholderFailed" xml:space="preserve">
+    <value>échec de la mise à jour du directeur ou de l'actionnaire. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="DeleteBusinessDirectorOrShareholderFailed" xml:space="preserve">
+    <value>échec de la suppression du directeur ou de l'actionnaire. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="GetAllBusinessDirectorOrShareholderFailed" xml:space="preserve">
+    <value>échec de la récupération des informations sur le directeur ou l'actionnaire. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="UpdateDirectorOrShareholderImageUploadFailed" xml:space="preserve">
+    <value>échec de la mise à jour de l'image du directeur ou de l'actionnaire. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="UploadDocumentFailed" xml:space="preserve">
+    <value>échec du téléchargement du document. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="AddBusinessDocumentFailed" xml:space="preserve">
+    <value>échec de l'ajout du document. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="UpdateBusinessDocumentFailed" xml:space="preserve">
+    <value>échec de la mise à jour du document. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="GetAllBusinessDocumentFailed" xml:space="preserve">
+    <value>échec de la récupération des documents. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="DeleteBusinessDocumentFailed" xml:space="preserve">
+    <value>échec de la suppression du document. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="GetActiveRegulatorsFailed" xml:space="preserve">
+    <value>échec de la récupération des régulateurs actifs. veuillez réessayer plus tard.</value>
+  </data>
+  <data name="GetActiveIndustriesFailed" xml:space="preserve">
+    <value>échec de la récupération des industries actives. veuillez réessayer plus tard.</value>
+  </data>
+
+  <data name="ValidationErrors" xml:space="preserve">
+    <value>erreur(s) de validation</value>
+  </data>
+
+  <data name="MerchantAlreadyExists" xml:space="preserve">
+        <value>le commerçant existe déjà et est intégré.</value>
+    </data>
+
+  <data name="GetTransactionsFailed" xml:space="preserve">
+    <value>failed to get transactions. try again later</value>
+    </data>
+</root>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+
+    <data name="EmailNotEmpty" xml:space="preserve">
+        <value>email cannot be empty</value>
+    </data>
+
+    <data name="InvalidEmail" xml:space="preserve">
+        <value>email must be a valid email address</value>
+    </data>
+    <data name="PasswordNotEmpty" xml:space="preserve">
+        <value>password cannot be empty</value>
+    </data>    
+    
+    <data name="FirstNameNotEmpty" xml:space="preserve">
+        <value>first Name cannot be empty.</value>
+    </data>
+
+    <data name="LastNameNotEmpty" xml:space="preserve">
+        <value>last name cannot be empty.</value>
+    </data>
+
+    <data name="PositionNotEmpty" xml:space="preserve">
+        <value>position cannot be empty.</value>
+    </data>
+
+    <data name="PositionNotSpecified" xml:space="preserve">
+        <value>position not specified</value>
+    </data>
+    <data name="ContactIdNotEmpty" xml:space="preserve">
+        <value>contact id cannot be empty</value>
+    </data>
+
+    <data name="MobileNumberNotEmpty" xml:space="preserve">
+        <value>mobile number cannot be empty.</value>
+    </data>
+
+    <data name="InvalidMobileNumber" xml:space="preserve">
+        <value>invalid mobile number</value>
+    </data>    
+    
+    <data name="IdentificationNumNotEmpty" xml:space="preserve">
+        <value>identification number cannot be empty</value>
+    </data>
+
+    <data name="ExpiryDateNotEmpty" xml:space="preserve">
+        <value>expiry date cannot be empty</value>
+    </data>
+
+    <data name="InvalidExpiryDate" xml:space="preserve">
+        <value>expiry date must be a valid date</value>
+    </data>
+
+    <data name="PlaceIssueNotEmpty" xml:space="preserve">
+        <value>place of issue cannot be empty</value>
+    </data>    
+    
+    <data name="TypeNotEmpty" xml:space="preserve">
+        <value>type cannot be empty</value>
+    </data>
+    <data name="TypeNotSpecified" xml:space="preserve">
+        <value>type not specified</value>
+    </data>
+    <data name="FrontImageNotEmpty" xml:space="preserve">
+        <value>front Image cannot be empty</value>
+    </data>
+    <data name="BackImageNotEmpty" xml:space="preserve">
+        <value>back image cannot be empty</value>
+    </data>
+    <data name="PortraitImageNotEmpty" xml:space="preserve">
+        <value>portrait image cannot be empty</value>
+    </data>
+    <data name="DocumentNotEmpty" xml:space="preserve">
+        <value>document cannot be empty</value>
+    </data>
+    <data name="DocumentSizeLimit" xml:space="preserve">
+        <value>document size must be less than 1MB</value>
+    </data>   
+    <data name="DocumentInvalid" xml:space="preserve">
+        <value>document must be a valid upload file</value>
+    </data>   
+    <data name="DocumentIdNotEmpty" xml:space="preserve">
+        <value>documentId cannot be empty</value>
+    </data>
+    <data name="MobileNumberLeast" xml:space="preserve">
+        <value>mobile number must be at least 10 characters</value>
+    </data>
+    
+    
+    <data name="BusinessNameNotEmpty" xml:space="preserve">
+        <value>business name cannot be empty.</value>
+    </data>
+    <data name="BusinessNameLeast" xml:space="preserve">
+        <value>business name must be at least 5 characters</value>
+    </data>
+
+    <data name="TradingNameNotEmpty" xml:space="preserve">
+        <value>trading name cannot be empty.</value>
+    </data>
+    <data name="TradingNameLeast" xml:space="preserve">
+        <value>trading name must be at least 5 characters</value>
+    </data>
+
+    <data name="PasswordLeast" xml:space="preserve">
+        <value>trading name must be at least 8 characters</value>
+    </data>
+
+    <data name="PasswordInvalid" xml:space="preserve">
+        <value>password must be at least 8 characters long and may contain at least one special character</value>
+    </data>
+
+    <data name="OtpNotEmpty" xml:space="preserve">
+        <value>otp cannot be empty</value>
+    </data>
+
+    <data name="OtpInvalid" xml:space="preserve">
+        <value>otp is not valid</value>
+    </data>     
+    
+    <data name="PurposeNotSpecified" xml:space="preserve">
+        <value>purpose not specified</value>
+    </data>
+    
+    <data name="DigitalAddressNotEmpty" xml:space="preserve">
+        <value>digital address cannot be empty</value>
+    </data>
+
+    <data name="FirstOccupancyDateNotEmpty" xml:space="preserve">
+        <value>first occupancy date cannot be empty</value>
+    </data>
+
+    <data name="FirstOccupancyDateInvalid" xml:space="preserve">
+        <value>first occupancy date must be a valid date</value>
+    </data>
+
+    <data name="OfficeOwnershipNotEmpty" xml:space="preserve">
+        <value>office ownership cannot be empty</value>
+    </data>
+
+    <data name="PostalAddressNotEmpty" xml:space="preserve">
+        <value>postal address cannot be empty</value>
+    </data>
+    <data name="CompanyNameNotEmpty" xml:space="preserve">
+        <value>company name cannot be empty</value>
+    </data>
+    <data name="DateOfInCorporationNotEmpty" xml:space="preserve">
+        <value>dateOfInCorporation cannot be empty</value>
+    </data>
+    <data name="DateOfInCorporationInvalid" xml:space="preserve">
+        <value>dateOfInCorporation must be a valid date.</value>
+    </data>
+    <data name="CompanyRegistrationNoNotEmpty" xml:space="preserve">
+        <value>company registration number cannot be empty</value>
+    </data>
+    <data name="CompanyRegistrationTypeNotEmpty" xml:space="preserve">
+        <value>company registration type cannot be empty</value>
+    </data>
+    <data name="CompanyRegistrationTypeNotSpecified" xml:space="preserve">
+        <value>company registration type not specified</value>
+    </data>
+    <data name="RegulatorIdNotEmpty" xml:space="preserve">
+        <value>regulator id cannot be empty</value>
+    </data>
+
+    <data name="IssueDateNotEmpty" xml:space="preserve">
+        <value>issue date cannot be empty</value>
+    </data>
+
+    <data name="IssueDateInvalid" xml:space="preserve">
+        <value>issue date must be a valid date</value>
+    </data>
+
+    <data name="ExpiryDateNotEmpty" xml:space="preserve">
+        <value>expiry date cannot be empty</value>
+    </data>
+
+    <data name="TaxIDNumberNotEmpty" xml:space="preserve">
+        <value>tax identification number cannot be empty</value>
+    </data>
+
+    <data name="VATNumberNotEmpty" xml:space="preserve">
+        <value>vat number cannot be empty</value>
+    </data>
+
+    <data name="MerchantAlreadyExists" xml:space="preserve">
+    <value>merchant already exists and onboarded</value>
+  </data>
+</root>

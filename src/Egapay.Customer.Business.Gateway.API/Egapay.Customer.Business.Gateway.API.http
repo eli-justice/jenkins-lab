@@ -1,0 +1,6 @@
+@Egapay.Customer.Business.Gateway.API_HostAddress = http://localhost:5274
+
+GET {{Egapay.Customer.Business.Gateway.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
