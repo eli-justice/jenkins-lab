@@ -2,23 +2,24 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS builder
 WORKDIR /src
 
-# copy solution file
-COPY Egapay.Customer.Business.Gateway.sln ./
+# copy solution file (located inside src folder in repo)
+COPY src/Egapay.Customer.Business.Gateway.sln ./src/
 
-# copy all project files
-COPY Egapay.Customer.Business.Gateway.API ./Egapay.Customer.Business.Gateway.API
-COPY Egapay.Customer.Business.Gateway.Common ./Egapay.Customer.Business.Gateway.Common
-COPY Egapay.Customer.Business.Gateway.MerchantOnboarding ./Egapay.Customer.Business.Gateway.MerchantOnboarding
-COPY Egapay.Customer.Business.Gateway.MerchantTransactions ./Egapay.Customer.Business.Gateway.MerchantTransactions
+# copy all projects into /src/src/
+COPY src/Egapay.Customer.Business.Gateway.API ./src/Egapay.Customer.Business.Gateway.API
+COPY src/Egapay.Customer.Business.Gateway.Common ./src/Egapay.Customer.Business.Gateway.Common
+COPY src/Egapay.Customer.Business.Gateway.MerchantOnboarding ./src/Egapay.Customer.Business.Gateway.MerchantOnboarding
+COPY src/Egapay.Customer.Business.Gateway.MerchantTransactions ./src/Egapay.Customer.Business.Gateway.MerchantTransactions
 
-# restore dependencies
+# restore using the solution file
+WORKDIR /src/src
 RUN dotnet restore
 
 # build + publish API project
-RUN dotnet publish ./Egapay.Customer.Business.Gateway.API/Egapay.Customer.Business.Gateway.API.csproj \
+RUN dotnet publish Egapay.Customer.Business.Gateway.API/Egapay.Customer.Business.Gateway.API.csproj \
     -c Release -o /app/out
 
-# final runtime stage
+# runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=builder /app/out .
