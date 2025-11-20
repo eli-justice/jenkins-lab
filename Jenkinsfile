@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         APP_NAME = "justixapi"
-        REGISTRY = "docker.io/mensahelikem44850 "
+        REGISTRY = "docker.io/mensahelikem44850"
         IMAGE = "${REGISTRY}/${APP_NAME}"
         KUBECONFIG_CONTENT = credentials('Kubeconfig-local')
         DOCKER_USER = credentials('docker-username')
