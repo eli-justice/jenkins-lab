@@ -4,81 +4,48 @@ pipeline {
     environment {
         APP_NAME = "justixapi"
         REGISTRY = "docker.io/mensahelikem44850"
-        IMAGE = "${REGISTRY}/${APP_NAME}"
-        KUBECONFIG_CONTENT = credentials('Kubeconfig-local')
-        DOCKER_USER = credentials('docker-username')
-        DOCKER_PASS = credentials('docker-password')
+        IMAGE = "${REGISTRY}/${APP_NAME}:latest"
     }
 
     stages {
 
         stage('Checkout') {
             steps {
-                git branch: 'dev', url: 'https://github.com/eli-justice/jenkins-lab.git'
+                checkout scm
             }
         }
 
         stage('Docker Login') {
             steps {
-                sh '''
-                  echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-                '''
+                withCredentials([usernamePassword(credentialsId: 'docker-credentials', passwordVariable: 'DOCKER_PASS', usernameVariable: 'DOCKER_USER')]) {
+                    sh "echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin"
+                }
             }
         }
 
-        stage('Debug') {
+        stage('Build Docker Image') {
             steps {
-                sh 'pwd'
-                sh 'ls -la'
+                sh "docker build -t ${IMAGE} ."
             }
         }
 
-        stage('Build Image') {
+        stage('Push Docker Image') {
             steps {
-              dir(src/Egapay.Customer.Business.Gateway.API) {
-                sh '''
-                  docker build -t docker.io/mensahelikem44850/justixapi:${BUILD_NUMBER} ..
-                '''
+                sh "docker push ${IMAGE}"
             }
         }
-     }
 
-        stage('Push Image') {
+        stage('Configure Kubeconfig') {
             steps {
-                sh '''
-                  docker push ${IMAGE}:${BUILD_NUMBER}
-                '''
+                withCredentials([file(credentialsId: 'kubeconfig-local', variable: 'KUBECONFIG_FILE')]) {
+                    sh 'export KUBECONFIG=$KUBECONFIG_FILE'
+                }
             }
         }
 
         stage('Deploy to K8s') {
             steps {
-                sh '''
-                  mkdir -p $WORKSPACE/kube
-                  echo "$KUBECONFIG_CONTENT" > $WORKSPACE/kube/config
-                  export KUBECONFIG=$WORKSPACE/kube/config
-
-                  kubectl set image deployment/${APP_NAME} \
-                    ${APP_NAME}=${IMAGE}:${BUILD_NUMBER}
-                '''
-            }
-        }
-
-        stage('Rollout Restart') {
-            steps {
-                sh '''
-                  export KUBECONFIG=$WORKSPACE/kube/config
-                  kubectl rollout restart deployment/${APP_NAME}
-                '''
-            }
-        }
-
-        stage('Verify') {
-            steps {
-                sh '''
-                  export KUBECONFIG=$WORKSPACE/kube/config
-                  kubectl rollout status deployment/${APP_NAME}
-                '''
+                sh "kubectl rollout restart deployment ${APP_NAME} -n dev"
             }
         }
     }
