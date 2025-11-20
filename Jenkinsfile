@@ -28,11 +28,13 @@ pipeline {
 
         stage('Build Image') {
             steps {
+              dir(src/Egapay.Customer.Business.Gateway.API) {
                 sh '''
                   docker build -t docker.io/mensahelikem44850/justixapi:${BUILD_NUMBER} ..
                 '''
             }
         }
+     }
 
         stage('Push Image') {
             steps {
