@@ -17,4 +17,4 @@ spec:
         - name: justixapi
           image:  yourdockerhubusername/testapi:latest
           ports:
-            - containerPort: 80
+            - containerPort: 3000
