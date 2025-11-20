@@ -4,49 +4,34 @@ pipeline {
     environment {
         APP_NAME = "justixapi"
         REGISTRY = "docker.io/mensahelikem44850"
-        IMAGE = "${REGISTRY}/${APP_NAME}:latest"
+        IMAGE = "${REGISTRY}/${APP_NAME}"
+        KUBECONFIG_CONTENT = credentials('Kubeconfig-local')
+        DOCKER_USER = credentials('docker-username')
+        DOCKER_PASS = credentials('docker-password')
     }
+           stage('Build Docker Image') {
+               steps {
+                   script {
+                       sh 'docker build -t docker.io/mensahelikem44850/justixapi:latest .'
+                   }
+               }
+           }
 
-    stages {
+           stage('Push Docker Image') {
+               steps {
+                   script {
+                       sh 'docker push docker.io/mensahelikem4485/justixapi:latest'
+                   }
+               }
+           }
 
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
+           stage('Deploy to K8s') {
+               steps {
+                   script {
+                       sh 'kubectl rollout restart deployment justixapi -n dev'
+                   }
+               }
+           }
+       }
+   }
 
-        stage('Docker Login') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-credentials', passwordVariable: 'DOCKER_PASS', usernameVariable: 'DOCKER_USER')]) {
-                    sh "echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin"
-                }
-            }
-        }
-
-        stage('Build Docker Image') {
-            steps {
-                sh "docker build -t ${IMAGE} ."
-            }
-        }
-
-        stage('Push Docker Image') {
-            steps {
-                sh "docker push ${IMAGE}"
-            }
-        }
-
-        stage('Configure Kubeconfig') {
-            steps {
-                withCredentials([file(credentialsId: 'kubeconfig-local', variable: 'KUBECONFIG_FILE')]) {
-                    sh 'export KUBECONFIG=$KUBECONFIG_FILE'
-                }
-            }
-        }
-
-        stage('Deploy to K8s') {
-            steps {
-                sh "kubectl rollout restart deployment ${APP_NAME} -n dev"
-            }
-        }
-    }
-}
