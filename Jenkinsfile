@@ -9,29 +9,44 @@ pipeline {
         DOCKER_USER = credentials('docker-username')
         DOCKER_PASS = credentials('docker-password')
     }
-           stage('Build Docker Image') {
-               steps {
-                   script {
-                       sh 'docker build -t docker.io/mensahelikem44850/justixapi:latest .'
-                   }
-               }
-           }
 
-           stage('Push Docker Image') {
-               steps {
-                   script {
-                       sh 'docker push docker.io/mensahelikem44850/justixapi:latest'
-                   }
-               }
-           }
+    stages {
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    sh "docker build -t ${IMAGE}:${BUILD_NUMBER} -t ${IMAGE}:latest ."
+                }
+            }
+        }
 
-           stage('Deploy to K8s') {
-               steps {
-                   script {
-                       sh 'kubectl rollout restart deployment justixapi -n dev'
-                   }
-               }
-           }
-       }
-   }
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    sh """
+                        echo ${DOCKER_PASS} | docker login -u ${DOCKER_USER} --password-stdin
+                        docker push ${IMAGE}:${BUILD_NUMBER}
+                        docker push ${IMAGE}:latest
+                    """
+                }
+            }
+        }
 
+        stage('Deploy to K8s') {
+            steps {
+                script {
+                    sh """
+                        mkdir -p ~/.kube
+                        echo '${KUBECONFIG_CONTENT}' > ~/.kube/config
+                        kubectl rollout restart deployment ${APP_NAME} -n dev
+                    """
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            sh 'docker logout'
+        }
+    }
+}
