@@ -29,7 +29,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 sh '''
-                  docker build -t ${IMAGE}:${BUILD_NUMBER} .
+                  docker build -t docker.io/mensahelikem44850/justixapi:${BUILD_NUMBER} ..
                 '''
             }
         }
