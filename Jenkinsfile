@@ -5,25 +5,25 @@ pipeline {
         APP_NAME = "justixapi"
         REGISTRY = "docker.io/mensahelikem44850"
         IMAGE = "${REGISTRY}/${APP_NAME}"
-        KUBECONFIG_CONTENT = credentials('Kubeconfig-local')
-        DOCKER_USER = credentials('docker-username')
-        DOCKER_PASS = credentials('docker-password')
     }
 
     stages {
+
         stage('Build Docker Image') {
             steps {
-                script {
-                    sh "docker build -t ${IMAGE}:${BUILD_NUMBER} -t ${IMAGE}:latest ."
-                }
+                sh "docker build -t ${IMAGE}:${BUILD_NUMBER} -t ${IMAGE}:latest ."
             }
         }
 
         stage('Push Docker Image') {
             steps {
-                script {
+                withCredentials([usernamePassword(
+                    credentialsId: 'docker-creds',
+                    usernameVariable: 'USER',
+                    passwordVariable: 'PASS'
+                )]) {
                     sh """
-                        echo ${DOCKER_PASS} | docker login -u ${DOCKER_USER} --password-stdin
+                        echo "$PASS" | docker login -u "$USER" --password-stdin
                         docker push ${IMAGE}:${BUILD_NUMBER}
                         docker push ${IMAGE}:latest
                     """
@@ -33,10 +33,10 @@ pipeline {
 
         stage('Deploy to K8s') {
             steps {
-                script {
+                withCredentials([file(credentialsId: 'Kubeconfig-local', variable: 'KCFG')]) {
                     sh """
                         mkdir -p ~/.kube
-                        echo '${KUBECONFIG_CONTENT}' > ~/.kube/config
+                        cp "$KCFG" ~/.kube/config
                         kubectl rollout restart deployment ${APP_NAME} -n dev
                     """
                 }
