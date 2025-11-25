@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: justixapi
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: justixapi
+  template:
+    metadata:
+      labels:
+        app: justixapi
+    spec:
+      containers:
+        - name: justixapi
+          image: docker.io/mensahelikem44850/justixapi:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Production"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: justixapi
+  namespace: dev
+spec:
+  selector:
+    app: justixapi
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+  type: ClusterIP
