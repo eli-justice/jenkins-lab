@@ -17,17 +17,14 @@ pipeline {
 
         stage('Push Docker Image') {
             steps {
-                withCredentials([usernamePassword(
-                    credentialsId: 'docker-creds',
-                    usernameVariable: 'USER',
-                    passwordVariable: 'PASS'
-                )]) {
+                withCredentials([usernamePassword(credentialsId: 'docker-hub-creds',
+                                                  usernameVariable: 'DOCKER_USER',
+                                                  passwordVariable: 'DOCKER_PASS')]) {
                     sh """
-                        echo "$PASS" | docker login -u "$USER" --password-stdin
-                        docker push ${IMAGE}:${BUILD_NUMBER}
-                        docker push ${IMAGE}:latest
+                        echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
                     """
                 }
+
             }
         }
 
