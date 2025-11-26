@@ -6,7 +6,9 @@ pipeline {
         REGISTRY = "docker.io/mensahelikem44850"
         IMAGE = "${REGISTRY}/${APP_NAME}"
     }
-
+    triggers {
+        pollSCM('H/2 * * * *')
+    }
     stages {
 
         stage('Build Docker Image') {
