@@ -6,14 +6,19 @@ pipeline {
         REGISTRY = "docker.io/mensahelikem44850"
         IMAGE = "${REGISTRY}/${APP_NAME}"
     }
+
     triggers {
         pollSCM('H/2 * * * *')
     }
+
     stages {
 
         stage('Build Docker Image') {
             steps {
-                sh "docker build -t ${IMAGE}:${BUILD_NUMBER} ."
+                sh """
+                    docker build \
+                        -t ${IMAGE}:${BUILD_NUMBER} .
+                """
             }
         }
 
@@ -24,6 +29,9 @@ pipeline {
                                                   passwordVariable: 'DOCKER_PASS')]) {
                     sh """
                         echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+
+                        docker push ${IMAGE}:${BUILD_NUMBER}
+                        docker push ${IMAGE}:latest
                     """
                 }
             }
@@ -36,7 +44,6 @@ pipeline {
                         mkdir -p ~/.kube
                         cp "$KCFG" ~/.kube/config
 
-                        # Apply deployment and service manifests
                         kubectl apply -f k8s/deployment.yaml -n dev
                     """
                 }
