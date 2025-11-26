@@ -37,7 +37,7 @@ WORKDIR /app
 # Runtime environment variables
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
-ENV NEXT_PUBLIC_API_URL=''
+ENV NEXT_PUBLIC_API_URL='iam1z'
 
 # Create non-root user for security
 RUN addgroup --system --gid 1001 nodejs
