@@ -4,7 +4,7 @@ metadata:
   name: justixapi
   namespace: dev
 spec:
-  replicas: 3
+  replicas: 0
   selector:
     matchLabels:
       app: justixapi
